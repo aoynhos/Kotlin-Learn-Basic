@@ -1,5 +1,5 @@
 
-/**1、helloworld hello kotlin- 你的第一个kotlin程序
+/**第一章helloworld hello kotlin- 你的第一个kotlin程序
  * (1)fun 是定义函数的入口
  * (2)main 是kotlin的启动函数
  * (3)main(){}中的{}用来写函数体
