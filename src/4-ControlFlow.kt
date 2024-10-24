@@ -7,7 +7,11 @@ fun main(){
 //    ifUse()
 //    whenUse()
 //    Exercise41()
-    Exercise42()
+//    Exercise42()
+//    forUse()
+//    whileUse()
+//    Exercise01()
+    Exercise02()
 }
 
 /**1、IF
@@ -86,7 +90,7 @@ fun Exercise41(){
 
 fun Exercise42(){
 
-        val button = "X"
+        val button = "A"
 
         println(
             when(button){
@@ -98,3 +102,91 @@ fun Exercise42(){
             }
         )
 }
+
+/**3、Loops 循环
+ * 最常见的是for循环已经while循环
+ * */
+fun forUse(){
+    for (num in 0..10) {
+        print(num)
+    }
+    println()
+
+    val cakes = listOf("carrot", "cheese", "chocolate")
+    for (cake in cakes) {
+        println("Yummy, it's a $cake cake!")
+    }
+}
+
+/**4、While循环
+ *
+ * */
+fun whileUse(){
+//    var cakesEaten = 0
+//    while (cakesEaten <= 3) {
+//        println("Eat a cake")
+//        cakesEaten++
+//    }
+
+    var cakesEaten = 0
+    var cakesBaked = 0
+    while (cakesEaten < 2) {
+        println("Eat a cake")
+        cakesEaten++
+    }
+    do {
+        println("Bake a cake")
+        cakesBaked++
+    } while (cakesBaked < cakesEaten)
+
+}
+/**问题：计算披萨片数直到8片
+ *
+ * */
+fun Exercise01(){
+    var pizzaSlices = 0
+    // Start refactoring here
+//    for(pizza in 1..8){
+//        pizzaSlices++
+//    }
+    while(pizzaSlices!=8){
+        println("There's only $pizzaSlices slice/s of pizza :(")
+        pizzaSlices++
+    }
+    // End refactoring here
+    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+}
+
+/**问题：递归打印1-100的数字任何能被3整除的数字替换为“fizz”，
+ * 将任何可被5整除的号码替换为“buzz”。任何能被3和5整除的数字都必须替换为“fizzbuzz”
+ *
+ * */
+fun Exercise02(){
+//    var num = 1
+//    while(num <= 100){
+//        if(num%3==0 && num%5==0){
+//            println("fizzbuzz")
+//        }
+//        else if(num%3==0){
+//            println("fizz")
+//        }
+//        else if(num%5==0){
+//            println("buzz")
+//
+//        }else{
+//            println(num)
+//        }
+//        num++
+//    }
+    for(num in 1..100){
+        println(when{
+            num % 15 ==0 -> "fizzbuzz"
+            num % 3==0  -> "fizz"
+            num % 5 == 0 -> "buzz"
+            else -> "$num"
+        })
+    }
+}
+
+
+
