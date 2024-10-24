@@ -1,4 +1,4 @@
-/**0、引言 Basic types基本数据类型
+/**第二章、 Basic types基本数据类型
  * (1)上一章中我们知道kotlin会自动推导类型，并进行运算操作
  * */
 fun main(){
