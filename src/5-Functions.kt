@@ -30,7 +30,10 @@ fun main() {
 //    Pass2AnotherFunction()
 //    functionTypes()
 //    returnFromAFunction()
-    trailingLambdas()
+//    trailingLambdas()
+//    LambdaExpressionsPractice01()
+    LambdaExpressionsPractice02()
+
 }
 
 
@@ -192,4 +195,28 @@ fun trailingLambdas(){
 
 // Alternatively, in the form of a trailing lambda
     println(listOf(1, 2, 3).fold(0) { x, item -> x + item })  // 6
+}
+
+/**
+ *
+ * */
+fun LambdaExpressionsPractice01(){
+    val actions = listOf("title", "year", "author")
+    val prefix = "https://example.com/book-info"
+    val id = 5
+    val urls = actions.map { actions->"${prefix}/$id/$actions" }  // Write your code here
+        println(urls)
+}
+
+/**问题：编写一个函数，接收一个int 和一个 动作
+ * 输入5 打印5次hello
+ *
+ * */
+fun repeatN(n: Int, action: () -> Unit) {
+    for(i in 1..n){
+        action()
+    }
+}
+fun LambdaExpressionsPractice02(){
+    repeatN(5){println("hello")}
 }
