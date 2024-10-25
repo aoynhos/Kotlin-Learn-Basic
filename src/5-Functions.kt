@@ -27,7 +27,9 @@ fun main() {
 //    println( Functionspractice01(2))
 //    println( Functionspractice02(2))
 //    Lambda()
-    Pass2AnotherFunction()
+//    Pass2AnotherFunction()
+    functionTypes()
+
 }
 
 
@@ -152,3 +154,16 @@ fun Pass2AnotherFunction(){
 // [3, -6, 9, -12, 15, -18]
 
 }
+
+/**9、Function types函数类型
+ *
+ * */
+fun functionTypes(){
+    val upperCaseString: (String) -> String = { a -> a.uppercase() }
+    println(upperCaseString("hello"))
+    // HELLO
+}
+
+/**
+ *
+ * */
