@@ -11,7 +11,8 @@ fun main(){
 //    forUse()
 //    whileUse()
 //    Exercise01()
-    Exercise02()
+//    Exercise02()
+    Exercise03()
 }
 
 /**1、IF
@@ -185,6 +186,18 @@ fun Exercise02(){
             num % 5 == 0 -> "buzz"
             else -> "$num"
         })
+    }
+}
+
+/**问题：有一个单词列表，输出以l开头的单词
+ *(1).startsWith("") 判断字符串是否以xx开头
+ * */
+fun Exercise03(){
+    val words = listOf("dinosaur", "limousine", "magazine", "language")
+    // Write your code here
+    for(word in words){
+        if(word.startsWith("l"))
+            println(word)
     }
 }
 
