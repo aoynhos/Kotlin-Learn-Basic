@@ -26,8 +26,8 @@ fun main() {
 //    // User registered successfully: new_user
 //    println( Functionspractice01(2))
 //    println( Functionspractice02(2))
-    Lambda()
-
+//    Lambda()
+    Pass2AnotherFunction()
 }
 
 
@@ -119,4 +119,36 @@ fun Lambda(){
     println(upperCaseString("abc"))
     val hello = { println("hello") }
     hello()
+
+
+}
+
+/**8、Lambda表达式可以作为参数传递给其他函数
+ *
+ * */
+fun Pass2AnotherFunction(){
+    val numbers = listOf(1, -2, 3, -4, 5, -6)
+
+
+    val positives = numbers.filter ({ x -> x > 0 })
+
+    val isNegative = { x: Int -> x < 0 }
+    val negatives = numbers.filter(isNegative)
+
+    println(positives)
+// [1, 3, 5]
+    println(negatives)
+// [-2, -4, -6]
+
+
+    val doubled = numbers.map { x -> x * 2 }
+
+    val isTripled = { x: Int -> x * 3 }
+    val tripled = numbers.map(isTripled)
+
+    println(doubled)
+// [2, -4, 6, -8, 10, -12]
+    println(tripled)
+// [3, -6, 9, -12, 15, -18]
+
 }
