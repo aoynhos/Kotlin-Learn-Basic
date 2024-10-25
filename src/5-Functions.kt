@@ -29,7 +29,8 @@ fun main() {
 //    Lambda()
 //    Pass2AnotherFunction()
 //    functionTypes()
-    returnFromAFunction()
+//    returnFromAFunction()
+    trailingLambdas()
 }
 
 
@@ -181,3 +182,14 @@ fun returnFromAFunction(){
     // Total time is 1680 secs
 }
 
+/**11、Trailing lambdas
+ * (1)lambda作为函数的最后一个参数传递可以省略括号 称为trailing lambda
+ * */
+fun trailingLambdas(){
+// The initial value is zero.
+// The operation sums the initial value with every item in the list cumulatively.
+    println(listOf(1, 2, 3).fold(0, { x, item -> x + item })) // 6
+
+// Alternatively, in the form of a trailing lambda
+    println(listOf(1, 2, 3).fold(0) { x, item -> x + item })  // 6
+}
